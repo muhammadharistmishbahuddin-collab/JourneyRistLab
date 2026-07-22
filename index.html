@@ -316,10 +316,6 @@
                     <h2>Mulai Perjalanan Anda</h2>
                     <p>Mari diskusikan ide Anda dan wujudkan menjadi karya yang berkesan. Hubungi kami untuk konsultasi dan penawaran.</p>
                     <div class="contact-details">
-                        <a href="https://wa.me/6287788128381" target="_blank" class="contact-item">
-                            <i class="ph-fill ph-whatsapp-logo"></i>
-                            <span>+62 877-8812-8381 (Konsultasi via WA)</span>
-                        </a>
                         <a href="mailto:journeyristlab@gmail.com" class="contact-item">
                             <i class="ph-fill ph-envelope-simple"></i>
                             <span>journeyristlab@gmail.com</span>
@@ -331,17 +327,14 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); const name=this.querySelector('input[type=text]').value; const email=this.querySelector('input[type=email]').value; const msg=this.querySelector('textarea').value; window.open(`https://wa.me/6287788128381?text=Halo%20JourneyRist%20Lab,%20saya%20${encodeURIComponent(name)}%20(${encodeURIComponent(email)}):%20${encodeURIComponent(msg)}`, '_blank');">
+                    <form onsubmit="event.preventDefault(); const name=this.querySelector('input[type=text]').value; const msg=this.querySelector('textarea').value; window.open(`https://wa.me/6287788128381?text=Halo%20JourneyRist%20Lab,%20saya%20${encodeURIComponent(name)}:%20${encodeURIComponent(msg)}`, '_blank');">
                         <div class="form-group">
                             <input type="text" placeholder="Nama Anda" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Anda" required>
-                        </div>
-                        <div class="form-group">
                             <textarea placeholder="Ceritakan ide proyek Anda..." rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary w-100">Kirim Pesan <i class="ph ph-paper-plane-tilt"></i></button>
+                        <button type="submit" class="btn-primary w-100 btn-whatsapp">Kirim Pesan <i class="ph-fill ph-whatsapp-logo"></i></button>
                     </form>
                 </div>
             </div>
