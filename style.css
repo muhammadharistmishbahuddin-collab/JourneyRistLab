@@ -667,10 +667,47 @@ a {
     background: var(--bg-darker);
 }
 
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgba(166, 138, 86, 0.3);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), #856C3C);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.portfolio-item.hide {
+    display: none;
 }
 
 .portfolio-item {
@@ -725,6 +762,92 @@ a {
     color: var(--primary-color);
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+/* Image Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0,0,0,0.9); 
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    height: 85%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--primary-color);
+}
+
+.prev-modal, .next-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s ease;
+    border-radius: 0 8px 8px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next-modal {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+.prev-modal {
+    left: 0;
+}
+
+.prev-modal:hover, .next-modal:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: var(--primary-color);
 }
 
 /* Contact/Footer */
@@ -896,8 +1019,11 @@ a {
     .mobile-menu-btn {
         display: block;
     }
-    .services-grid, .portfolio-grid {
+    .services-grid {
         grid-template-columns: 1fr;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     .hero-cta {
         flex-direction: column;
@@ -906,5 +1032,11 @@ a {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }

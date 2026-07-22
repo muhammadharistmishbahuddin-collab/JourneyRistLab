@@ -261,47 +261,182 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
                 <h2>Karya Kami</h2>
                 <p>Beberapa proyek yang telah berhasil kami wujudkan bersama klien.</p>
             </div>
             
+            <!-- Portfolio Filters -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="3d-printing">3D Printing</button>
+                <button class="filter-btn" data-filter="laser-cutting">Laser Cutting</button>
+                <button class="filter-btn" data-filter="design">Desain & Edukasi</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <!-- Placeholder items representing user's image attachments -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img placeholder-img">
-                        <i class="ph ph-cube"></i>
+                <!-- Tempat Sampo item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1pVnjo40dX9Rwop0xEtl-h_E02qR3pCUC&sz=w1200', 'https://drive.google.com/thumbnail?id=1wIQAw6JaoZGU7Wm5j0EN1lqOVu4eoRVk&sz=w1200', 'https://drive.google.com/thumbnail?id=1a3xrSTXbUJ-ZnrJjanVelintQkdg7Nor&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1pVnjo40dX9Rwop0xEtl-h_E02qR3pCUC&sz=w600" alt="Tempat Sampo" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="portfolio-info">
-                        <h4>3D Design Prototype</h4>
-                        <p>Simulasi & Rendering</p>
+                        <h4>Tempat Sampo</h4>
+                        <p>3D Printing FDM</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img placeholder-img">
-                        <i class="ph ph-medal"></i>
+
+                <!-- Keranjang item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1niIcjU1A-FUS9RGKnk8Dv2IA_PeS-DIA&sz=w1200', 'https://drive.google.com/thumbnail?id=14a3U7FfNlwoMA6_3lnB2Cs8ZRTllbLjG&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1niIcjU1A-FUS9RGKnk8Dv2IA_PeS-DIA&sz=w600" alt="Keranjang" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="portfolio-info">
-                        <h4>Pin Kayu Kustom</h4>
-                        <p>Laser Cutting & Engraving</p>
+                        <h4>Keranjang</h4>
+                        <p>3D Printing FDM</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img placeholder-img">
-                        <i class="ph ph-blueprint"></i>
+
+                <!-- Scraper item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1KBRXEL4hxWd6qGQNnYRIZS0UTmTfRIaI&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1KBRXEL4hxWd6qGQNnYRIZS0UTmTfRIaI&sz=w600" alt="Scraper" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="portfolio-info">
-                        <h4>Desain Mesin Shredder</h4>
-                        <p>Technical Drawing</p>
+                        <h4>Scraper</h4>
+                        <p>3D Printing FDM</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img placeholder-img">
-                        <i class="ph ph-squares-four"></i>
+
+                <!-- Screen Cover item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1TGXZVXfoK2Ec2XRtkypkDsXn4thiLCQ7&sz=w1200', 'https://drive.google.com/thumbnail?id=1qaXenqggPSUs0Dk44u1NC88pHs2h8cnI&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1TGXZVXfoK2Ec2XRtkypkDsXn4thiLCQ7&sz=w600" alt="Screen Cover" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="portfolio-info">
-                        <h4>Solidarity Plaque</h4>
-                        <p>Acrylic Engraving</p>
+                        <h4>Screen Cover</h4>
+                        <p>3D Printing FDM</p>
+                    </div>
+                </div>
+
+                <!-- X Linier Rail Cleaning item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1wTfZvzLHe2R-fjmO_NEyeR2oTWofv1m_&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1wTfZvzLHe2R-fjmO_NEyeR2oTWofv1m_&sz=w600" alt="X Linier Rail Cleaning" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>X Linier Rail Cleaning</h4>
+                        <p>3D Printing FDM</p>
+                    </div>
+                </div>
+
+                <!-- Ganci Piala Dunia item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1lHy9cAtXZ0EkjbekW2cx4RuqHPzKFXlE&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1lHy9cAtXZ0EkjbekW2cx4RuqHPzKFXlE&sz=w600" alt="Ganci Piala Dunia" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Ganci Piala Dunia</h4>
+                        <p>3D Printing FDM</p>
+                    </div>
+                </div>
+
+                <!-- Poop Deflektor item -->
+                <div class="portfolio-item" data-category="3d-printing" onclick="openModal(['https://drive.google.com/thumbnail?id=1_0J77PgctNXtNz9Y4tVg_oYPGaef3uvb&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1_0J77PgctNXtNz9Y4tVg_oYPGaef3uvb&sz=w600" alt="Poop Deflektor" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Poop Deflektor</h4>
+                        <p>3D Printing FDM</p>
+                    </div>
+                </div>
+
+                <!-- Ganci Custom item -->
+                <div class="portfolio-item" data-category="laser-cutting" onclick="openModal(['https://drive.google.com/thumbnail?id=1N88LwdRH6VGi9H92n69CMSzpwsZaRdl2&sz=w1200', 'https://drive.google.com/thumbnail?id=10X4LIwgoQ3mjgym2lG6foezhp3AEGMnQ&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1N88LwdRH6VGi9H92n69CMSzpwsZaRdl2&sz=w600" alt="Ganci Custom" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Ganci Custom</h4>
+                        <p>Laser Cutting CO₂</p>
+                    </div>
+                </div>
+
+                <!-- Custom Grafir Akrilik Emas item -->
+                <div class="portfolio-item" data-category="laser-cutting" onclick="openModal(['https://drive.google.com/thumbnail?id=1rKuW5TRVGAjmh6oDciz1ZhNWZG7dZ5cb&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1rKuW5TRVGAjmh6oDciz1ZhNWZG7dZ5cb&sz=w600" alt="Custom Grafir Akrilik Emas" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Custom Grafir Akrilik Emas</h4>
+                        <p>Laser Cutting CO₂</p>
+                    </div>
+                </div>
+
+                <!-- Custom Grafir Akrilik Transparan item -->
+                <div class="portfolio-item" data-category="laser-cutting" onclick="openModal(['https://drive.google.com/thumbnail?id=1xfmtmN-58rAYRfKwHtPpgQO0r2qFzwGY&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1xfmtmN-58rAYRfKwHtPpgQO0r2qFzwGY&sz=w600" alt="Custom Grafir Akrilik Transparan" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Custom Grafir Akrilik Transparan</h4>
+                        <p>Laser Cutting CO₂</p>
+                    </div>
+                </div>
+
+                <!-- Cutting Triplek item -->
+                <div class="portfolio-item" data-category="laser-cutting" onclick="openModal(['https://drive.google.com/thumbnail?id=1K1SKzllUA3f6yUvyAskg7n6VtmTfliT1&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1K1SKzllUA3f6yUvyAskg7n6VtmTfliT1&sz=w600" alt="Cutting Triplek" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Cutting Triplek</h4>
+                        <p>Laser Cutting CO₂</p>
+                    </div>
+                </div>
+
+                <!-- Phone Holder item -->
+                <div class="portfolio-item" data-category="laser-cutting" onclick="openModal(['https://drive.google.com/thumbnail?id=1nFHzzl80bQb1tLRmhtY4aluVDAbwWmAW&sz=w1200', 'https://drive.google.com/thumbnail?id=1feGiWxdseoq8eonOfFFpUvf9b7IFP_Fs&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1nFHzzl80bQb1tLRmhtY4aluVDAbwWmAW&sz=w600" alt="Phone Holder" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Phone Holder</h4>
+                        <p>Laser Cutting CO₂</p>
+                    </div>
+                </div>
+
+                <!-- Desain Injection Plastik item -->
+                <div class="portfolio-item" data-category="design" onclick="openModal(['https://drive.google.com/thumbnail?id=1xER341Z0af-kpIITcUAbOfuYlia7VC9S&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1xER341Z0af-kpIITcUAbOfuYlia7VC9S&sz=w600" alt="Desain Injection Plastik" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Desain Injection Plastik</h4>
+                        <p>Desain & Edukasi</p>
+                    </div>
+                </div>
+
+                <!-- Desain Sheredder Plastik item -->
+                <div class="portfolio-item" data-category="design" onclick="openModal(['https://drive.google.com/thumbnail?id=1N0R6-okXHostVZpb1m-3R4plNe88pPJF&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1N0R6-okXHostVZpb1m-3R4plNe88pPJF&sz=w600" alt="Desain Sheredder Plastik" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Desain Sheredder Plastik</h4>
+                        <p>Desain & Edukasi</p>
+                    </div>
+                </div>
+
+                <!-- Desain Pemotong Kripik item -->
+                <div class="portfolio-item" data-category="design" onclick="openModal(['https://drive.google.com/thumbnail?id=1USDVToHOAFOB5GMSPjaeGs6AYsOQ7hck&sz=w1200'])" style="cursor: pointer;">
+                    <div class="portfolio-img" style="padding: 0;">
+                        <img src="https://drive.google.com/thumbnail?id=1USDVToHOAFOB5GMSPjaeGs6AYsOQ7hck&sz=w600" alt="Desain Pemotong Kripik" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Desain Pemotong Kripik</h4>
+                        <p>Desain & Edukasi</p>
                     </div>
                 </div>
             </div>
@@ -353,6 +488,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="">
+            <a class="prev-modal" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next-modal" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
