@@ -667,6 +667,10 @@ a {
     background: var(--bg-darker);
 }
 
+#portfolio .section-header {
+    margin-bottom: 2.5rem;
+}
+
 .portfolio-filters {
     display: flex;
     justify-content: center;
